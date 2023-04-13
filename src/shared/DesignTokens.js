@@ -31,12 +31,16 @@ export const FontSizes = {
 	ONE_HALF: '12px',
 	ONE_QUARTER: '14px',
 	TWO: '16px',
+	TWO_HALF: '18px',
 	THREE: '24px',
 	FOUR: '32px',
 };
 export const FontWeights = {
 	THIN: 200,
+	LIGHT: 300,
 	REGULAR: 400,
+	MEDIUM: 500,
+	SEMIBOLD: 600,
 	BOLD: 700,
 };
 
@@ -61,7 +65,12 @@ export const BorderRadiuses = {
     THREE: '18px',
     FOUR: '24px',
 };
+
 export const Shadows = {
-	ONE: '0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24)',
-	TWO: '0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14)',
+	ONE: '0px 4px 6px rgba(0, 0, 0, 0.2)',
+	TWO: '0px 1px 6px rgba(0, 0, 0, 0.1)',
 };
+
+export const TextTransform = {
+	UPPERCASE: 'uppercase',
+}
