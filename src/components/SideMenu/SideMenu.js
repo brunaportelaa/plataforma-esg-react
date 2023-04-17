@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Colors, Spaces } from "../../shared/DesignTokens";
 import { UserInfo } from "../UserInfo/UserInfo";
 import { ExpInfo } from "../ExpInfo/ExpInfo";
+import { Navigation } from "../Navigation/Navigation";
 
 export const SidebarNav = () => {
 
@@ -15,6 +16,7 @@ export const SidebarNav = () => {
         <SidebarDiv>
             <UserInfo />
             <ExpInfo />
+            <Navigation />
         </SidebarDiv>
     )
 };
