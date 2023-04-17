@@ -11,7 +11,7 @@ const UserAvatar = styled.div`
     height: 80px;
     background-color: #000000;
     border-color: #FF0000;
-    margin-right: ${Spaces.ONE_HALF};
+    margin: 0 ${Spaces.ONE_HALF} ${Spaces.FOUR} 0;
 `;
 
 export const UserInfo = () => {

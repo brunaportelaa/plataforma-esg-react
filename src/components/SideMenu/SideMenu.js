@@ -1,18 +1,20 @@
-import styled from "styled-components"
-import { Colors, Spaces } from "../../shared/DesignTokens"
-import { UserInfo } from "../UserInfo/UserInfo"
+import styled from "styled-components";
+import { Colors, Spaces } from "../../shared/DesignTokens";
+import { UserInfo } from "../UserInfo/UserInfo";
+import { ExpInfo } from "../ExpInfo/ExpInfo";
 
 export const SidebarNav = () => {
 
     const SidebarDiv = styled.div`
-        width: 250px;
-        padding: ${Spaces.ONE_HALF};
+        width: 300px;
+        padding: ${Spaces.FOUR};
         background-color: ${Colors.GREY_100};
         `
     
     return (
         <SidebarDiv>
             <UserInfo />
+            <ExpInfo />
         </SidebarDiv>
     )
-}
+};
