@@ -8,6 +8,7 @@ export const SidebarNav = () => {
 
     const SidebarDiv = styled.div`
         width: 300px;
+        height: 100vh;
         padding: ${Spaces.FOUR};
         background-color: ${Colors.GREY_100};
         `

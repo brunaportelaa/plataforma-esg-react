@@ -8,7 +8,7 @@ import { BorderRadiuses, Colors } from '../../shared/DesignTokens';
 import { Flex } from 'reflexbox';
 
 const CategoriaBox = styled.div`
-    margin: 6px ;
+    margin: 6px;
     display: flex;
     flexGrow: 1;
     width: 100%;
@@ -25,7 +25,7 @@ const CategoriaIcon = styled.img.attrs((props) => ({src: props.src}))
  width: 30px;   
 `;
 
-export function CategoriaItem(){
+export function Categorias() {
     return (
         <Flex>
         <CategoriaBox>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { Colors, FontFamilies, FontSizes, FontWeights } from "../../shared/DesignTokens";
 
 const Green = styled.h2`

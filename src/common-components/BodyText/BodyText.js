@@ -9,9 +9,9 @@ import {
 
 export const BodyText = styled.p`
   font-family: ${FontFamilies.PRIMARY};
-  font-weight: ${FontWeights.REGULAR};
-  line-height: ${FontLineHeights.SMALL};
-  font-size: ${FontSizes.ONE_HALF};
+  font-weight: ${(props) => props.fontWeight};
+  line-height: ${FontLineHeights.MEDIUM};
+  font-size: ${(props) => props.fontSize};
   color: ${(props) => props.color};
   margin: ${(props) => props.margin};
   padding: 0;
@@ -20,4 +20,6 @@ export const BodyText = styled.p`
 BodyText.defaultProps = {
   color: Colors.GREY_500,
   margin: 0,
+  fontWeight: FontWeights.REGULAR,
+  fontSize: FontSizes.ONE_QUARTER,
 };
