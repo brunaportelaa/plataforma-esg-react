@@ -5,19 +5,18 @@ import { ExpInfo } from "../ExpInfo/ExpInfo";
 import { Navigation } from "../Navigation/Navigation";
 
 export const SidebarNav = () => {
+  const SidebarDiv = styled.div`
+    width: 100%;
+    height: 100vh;
+    padding: ${Spaces.FOUR};
+    background-color: ${Colors.GREY_100};
+  `;
 
-    const SidebarDiv = styled.div`
-        width: 300px;
-        height: 100vh;
-        padding: ${Spaces.FOUR};
-        background-color: ${Colors.GREY_100};
-        `
-    
-    return (
-        <SidebarDiv>
-            <UserInfo />
-            <ExpInfo />
-            <Navigation />
-        </SidebarDiv>
-    )
+  return (
+    <SidebarDiv>
+      <UserInfo />
+      <ExpInfo />
+      <Navigation />
+    </SidebarDiv>
+  );
 };
