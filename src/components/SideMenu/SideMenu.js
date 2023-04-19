@@ -7,7 +7,7 @@ import { Navigation } from "../Navigation/Navigation";
 export const SidebarNav = () => {
   const SidebarDiv = styled.div`
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 60px);
     padding: ${Spaces.FOUR};
     background-color: ${Colors.GREY_100};
   `;
