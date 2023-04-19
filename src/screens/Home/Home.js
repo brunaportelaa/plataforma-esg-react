@@ -14,12 +14,27 @@ export function Home() {
         <Grid item md="3">
           <SidebarNav />
         </Grid>
-        <Grid item md="9" padding={Spaces.FOUR}>
+        <Grid item md="9" padding={Spaces.FOUR} paddingX={Spaces.SIX}>
           <HeadingOne>Categorias</HeadingOne>
           <Categorias />
 
           <HeadingOne margin={"30px 0"}>Seus desafios</HeadingOne>
-          <Desafio />
+          <Desafio
+            titulo="Desligue o ar condicionado na saída"
+            descricao="Uma ótima tarefa para aqueles que costumam ser os últimos a sair:
+mande uma foto do ar desligado toda vez que for embora."
+          />
+
+          <Desafio
+            titulo="Só papel reciclado"
+            descricao="Apenas papel reciclado deve ser utilizado no escritório durante 18 dias. Confirme a tarefa diariamente para
+            recolher seus pontos."
+          />
+
+          <Desafio
+            titulo="Dia de bike"
+            descricao="Ideal para quem mora nas redondezas no escritório: venha de bike para o trabalho e deixe o carro em casa!"
+          />
         </Grid>
       </Grid>
     </>

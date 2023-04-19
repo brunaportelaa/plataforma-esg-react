@@ -14,30 +14,30 @@ const DesafioBox = styled.div`
   border-radius: 12px;
   padding: ${Spaces.THREE};
   display: flex;
+  margin-bottom: 20px;
 `;
 
-export function Desafio() {
+export function Desafio({ titulo, descricao }) {
   return (
     <DesafioBox>
       <Grid md="8">
-        {/* // fazer um unico componente de texto  */}
+        {/* // fazer um unico componente de texto melhor  */}
         <h3
           style={{
-            fontSize: FontSizes.TWO_HALF,
+            fontSize: FontSizes.TWO,
             fontWeight: FontWeights.SEMIBOLD,
             margin: 0,
           }}
         >
-          Desligue o ar condicionado na saída
+          {titulo}
         </h3>
         <p
           style={{
-            fontSize: FontSizes.TWO,
+            fontSize: FontSizes.ONE_HALF,
             marginBottom: 0,
           }}
         >
-          Uma ótima tarefa para aqueles que costumam ser os últimos a sair:
-          mande uma foto do ar desligado toda vez que for embora.
+          {descricao}
         </p>
       </Grid>
       <Grid
@@ -52,7 +52,7 @@ export function Desafio() {
         <Checkbox
           color="success"
           sx={{
-            transform: "scale(3)",
+            transform: "scale(2.5)",
             padding: "2px",
             height: "24px",
             width: "24px",
