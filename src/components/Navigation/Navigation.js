@@ -8,17 +8,20 @@ import TarefasIcon from "../../assets/icons/Tarefas-Icon.svg";
 import SairIcon from "../../assets/icons/Sair-Icon.svg";
 import { HeadingTwo } from "../../common-components/HeadingTwo/HeadingTwo";
 import { Colors } from "../../shared/DesignTokens";
+import { useNavigate } from "react-router-dom";
 
 const NavIcon = styled.img.attrs((props) => ({ src: props.src }))`
   width: 20px;
 `;
 
 export function Navigation() {
+  const navigate = useNavigate();
+
   return (
     <Box>
       <nav>
         <List>
-          <ListItemButton>
+          <ListItemButton onClick={() => navigate("/")}>
             <ListItem className="nav-item" disablePadding>
               <NavIcon src={DashboardIcon} />
               <HeadingTwo color={Colors.GREEN_500} margin={"0 0 0 8px"}>
@@ -41,7 +44,7 @@ export function Navigation() {
             </ListItem>
           </ListItemButton>
           <Divider />
-          <ListItemButton>
+          <ListItemButton onClick={() => navigate("/conquistas")}>
             <ListItem className="nav-item" disablePadding>
               <NavIcon src={ConquistasIcon} />
               <HeadingTwo margin={"0 0 0 8px"}>Conquistas</HeadingTwo>

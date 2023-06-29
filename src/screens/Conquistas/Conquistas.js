@@ -11,9 +11,15 @@ export function Conquistas() {
         <Grid item md="3">
           <SidebarNav />
         </Grid>
-        <Grid item md="9" padding={Spaces.FOUR} paddingX={Spaces.SIX}>
-          <HeadingOne style={{ fontSize: 48 }}  >C onquistas</HeadingOne>
-          <Conquista/>
+        <Grid
+          item
+          md="9"
+          padding={Spaces.FOUR}
+          paddingX={Spaces.SIX}
+          style={{ maxHeight: "calc(100vh - 60px)", overflow: "auto" }}
+        >
+          <HeadingOne style={{ fontSize: 48 }}>Conquistas</HeadingOne>
+          <Conquista />
         </Grid>
       </Grid>
     </>
