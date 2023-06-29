@@ -8,15 +8,18 @@ import TarefasIcon from "../../assets/icons/Tarefas-Icon.svg";
 import SairIcon from "../../assets/icons/Sair-Icon.svg";
 import { HeadingTwo } from "../../common-components/HeadingTwo/HeadingTwo";
 import { Colors } from "../../shared/DesignTokens";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const NavIcon = styled.img.attrs((props) => ({ src: props.src }))`
   width: 20px;
+  filter: ${(props) =>
+    props.active &&
+    "invert(55%) sepia(21%) saturate(650%) hue-rotate(75deg) brightness(91%) contrast(94%)"};
 `;
 
 export function Navigation() {
   const navigate = useNavigate();
-
+  const { pathname } = useLocation();
   return (
     <Box>
       <nav>
@@ -24,7 +27,10 @@ export function Navigation() {
           <ListItemButton onClick={() => navigate("/")}>
             <ListItem className="nav-item" disablePadding>
               <NavIcon src={DashboardIcon} />
-              <HeadingTwo color={Colors.GREEN_500} margin={"0 0 0 8px"}>
+              <HeadingTwo
+                color={pathname === "/" ? Colors.GREEN_500 : Colors.GREY_500}
+                margin={"0 0 0 8px"}
+              >
                 Dashboard
               </HeadingTwo>
             </ListItem>
@@ -46,8 +52,20 @@ export function Navigation() {
           <Divider />
           <ListItemButton onClick={() => navigate("/conquistas")}>
             <ListItem className="nav-item" disablePadding>
-              <NavIcon src={ConquistasIcon} />
-              <HeadingTwo margin={"0 0 0 8px"}>Conquistas</HeadingTwo>
+              <NavIcon
+                src={ConquistasIcon}
+                active={pathname === "/conquistas"}
+              />
+              <HeadingTwo
+                margin={"0 0 0 8px"}
+                color={
+                  pathname === "/conquistas"
+                    ? Colors.GREEN_500
+                    : Colors.GREY_500
+                }
+              >
+                Conquistas
+              </HeadingTwo>
             </ListItem>
           </ListItemButton>
           <Divider />
